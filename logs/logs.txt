@@ -1,0 +1,350 @@
+(chatbot) PS F:\chat_ecommerce> streamlit run app.py
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.6.224:8501
+
+
+
+> Entering new  chain...
+
+
+> Entering new  chain...
+Prompt after formatting:
+You are a helpful AI assistant that answers questions about an e-commerce company called "Sindabad.com" /
+    in a friendly and polite manner. You will be given a "Context" that will represent Sindabad.com's product inventory./
+    Users might ask about products, they might want to know your suggestions as well. Most importantly, they might ask about specific product and/
+    its associated product link. If they want to know about product links, you will provide it accordingly with the /
+    help of the given "Context". It should be noted, only the Mobile Phones sub category has product links in them,/
+    therefore, should the users ask a different product and want to know their product links you should tell them,/
+    "Only the mobile phones section has product links at the moment, in future additional sections will have product/
+    links in them". Answer the question in your own words as truthfully as possible from the context given to you./
+    If you do not know the answer to the question, simply respond with "I don't know. Could you please rephrase the/
+    question?". If questions are asked where there is no relevant information available in the context /
+    , answer the question with your existing knowledge on that question and "ignore" the "Context" given to you.
+
+    Context:
+ Product No: 1 "Product Type: Blender", "Brand: Sharp", "Origin: Japan", "Model: EM-100PM-ST", "Capacity: 1 Liter", "Color: Stainless Steel", "Warranty & Services: Free Service: 1 Year" Product No: 2 "Product Type: Blender", "Brand: Sharp", "Origin: Japan","Model: EM-181-GR","Color: Green", "Warranty & Services: Free Service: 1 Year" Product No: 3 "Product Type: Grinder & Juicer", "Color: Silver", "Size: 10.5X10.5X28.5", "Good Quality" Product No: 4 "Product Type: Blender", "Brand: Sharp", "Origin: Japan", "Model: EM-60PM-WH", "Capacity: 0.6 Liter", "Color: White", "Warranty & Services: Free Service: 1 Year" Product No: 5 "Product Type: Electric Garlic Masher", "Material: PC, PP plastic", "Color: white, pink, green", "Power: USB charging" Washers & Dryers: Washing Machine Product No: 1 "Product Type: Washing Machine", "Brand: Haier", "Model: HW80-BP12929S3", "Capacity: 8Kg", "Color: Ore Silver", "Warranty:", "Motor: Lifetime", "Parts & Service: 1 Year" Product No: 2 "Product Type: Washi
+
+ing Technology: No frost", "Door Finish: Glass", "Colour: Black", "Warranty: , Compressor: 10 Years", "Parts and Service: 2 Years" Product No: 3 "Product Type: Refrigerator", "Brand: Haier", "Model: HRF-251EPBW", "Door Finish: Glass", "Capacity(L): 231 Liter", "Colour: Blue", "Compressor Warranty: 12 Years" Product No: 4
+
+olor: Black", "Warranty:", "Compressor: 10 Years", "Parts and Service: 2 Years" Product No: 17 "Product Type: Refrigerator", "Brand: Haier", "Model: HRF-231EPBW", "Type: TM", "Cooling Technology: Direct Cool", "Door Finish: Glass", "Colour: Blue", "Compressor Warranty: 12 Years" Product No: 18 "Product Type: Refrigerator", "Brand: Haier", "Model: HRF-300WMBG", "Type: TM", "Cooling Technology: No frost", "Door Finish: Glass", "Color: Black", "Warranty: ", "Compressor: 10 Years", "Parts and Service: 2 Years" Product No: 19 "Product Type: Refrigerator", "Brand: Sharp", "Origin: Japan", "Capacity: 613 Liters", "Color: Black", "Warranty: "Electrical Spare Parts: 5 Years", "Compressor: 10 Years", "Free Service: 5 Years" Product No: 20 "Product Type: Refrigerator", "Brand: Haier", "Model: HRF-241EPBJ", "Cooling Technology: Direct Cool", "Door Finish: Glass", "Capacity(L): 221 Liter", "Compressor Warranty: 12 Years" Small Appliances: Blenders & Juicers:
+
+ee, logistics, and delivery solutions. We are entrepreneurs, visionaries, data hounds, IT technicians, relationship builders, and storytellers re-imagining how tomorrow’s workforce works. Collectively, we solve problems for businesses around Bangladesh and assist them in focusing on their core business while letting us handle the hassle of their operational supplies. We work hard and play hard. Together, we’ve created a dynamic, fun, inspiring environment where we can be ourselves. We are growing, we need people like you! Are you ready to transform the e-commerce industry? Join us and excel in becoming revolutionary! Product Categories: At sindabad.com, all the products are sorted into their respective categories and subcategories. We sort our products according to its uses, similarities between other products and so on. All of the products are divided into 8 major categories. These are: 1. Food & Grocery 2. Personal Care 3. Home & Living 4. Electronics & Appliances
+
+    Human: Hello
+    Assistant:
+
+> Finished chain.
+
+> Finished chain.
+COST:
+Tokens Used: 1210
+        Prompt Tokens: 1201
+        Completion Tokens: 9
+Successful Requests: 1
+Total Cost (USD): $0.0018195000000000002
+{'Page = 5.0': 'Text chunk: Product No: 1 "Product Type: Blender", "Brand: Sharp", "Origin: Japan", "Model: EM-100PM-ST", "Capacity: 1 Liter", "Color: Stainless Steel", "Warranty & Service...\n', 'Page = 2.0': 'Text chunk: ing Technology: No frost", "Door Finish: Glass", "Colour: Black", "Warranty: , Compressor: 10 Years", "Parts and Service: 2 Years" Product No: 3 "Product Type: ...\n', 'Page = 4.0': 'Text chunk: olor: Black", "Warranty:", "Compressor: 10 Years", "Parts and Service: 2 Years" Product No: 17 "Product Type: Refrigerator", "Brand: Haier", "Model: HRF-231EPBW...\n', 'Page = 1.0': 'Text chunk: ee, logistics, and delivery solutions. We are entrepreneurs, visionaries, data hounds, IT technicians, relationship builders, and storytellers re-imagining how ...\n'}
+
+
+> Entering new  chain...
+Prompt after formatting:
+Combine the chat history and follow up question into /
+        a standalone question. /
+        Chat History:
+Human: Hello
+Assistant: Hello! How can I assist you today?
+        Follow up question: I'm Mahmud. How are you today?
+
+
+> Finished chain.
+
+
+> Entering new  chain...
+
+
+> Entering new  chain...
+Prompt after formatting:
+You are a helpful AI assistant that answers questions about an e-commerce company called "Sindabad.com" /
+    in a friendly and polite manner. You will be given a "Context" that will represent Sindabad.com's product inventory./
+    Users might ask about products, they might want to know your suggestions as well. Most importantly, they might ask about specific product and/
+    its associated product link. If they want to know about product links, you will provide it accordingly with the /
+    help of the given "Context". It should be noted, only the Mobile Phones sub category has product links in them,/
+    therefore, should the users ask a different product and want to know their product links you should tell them,/
+    "Only the mobile phones section has product links at the moment, in future additional sections will have product/
+    links in them". Answer the question in your own words as truthfully as possible from the context given to you./
+    If you do not know the answer to the question, simply respond with "I don't know. Could you please rephrase the/
+    question?". If questions are asked where there is no relevant information available in the context /
+    , answer the question with your existing knowledge on that question and "ignore" the "Context" given to you.
+
+    Context:
+ ee, logistics, and delivery solutions. We are entrepreneurs, visionaries, data hounds, IT technicians, relationship builders, and storytellers re-imagining how tomorrow’s workforce works. Collectively, we solve problems for businesses around Bangladesh and assist them in focusing on their core business while letting us handle the hassle of their operational supplies. We work hard and play hard. Together, we’ve created a dynamic, fun, inspiring environment where we can be ourselves. We are growing, we need people like you! Are you ready to transform the e-commerce industry? Join us and excel in becoming revolutionary! Product Categories: At sindabad.com, all the products are sorted into their respective categories and subcategories. We sort our products according to its uses, similarities between other products and so on. All of the products are divided into 8 major categories. These are: 1. Food & Grocery 2. Personal Care 3. Home & Living 4. Electronics & Appliances
+
+Product Details of Sindabad.Com About Sindabad.com: Sindabad.com is one of the leading e-Commerce platforms in Bangladesh where you can find anything and everything for your home, office, or factory. Sindabad offers you a large variety of quality products at a cost-efficient price delivered to your premises. Sindabad.com after completing 5 years of its existence has started to take steps toward the B2C marketplace. After serving around 100,000 B2B customers and winning numerous accolades in the form of APICTA Awards 2018, Basis National ICT Awards in 2018, E-CAB Movers Award, and Daily Star ICT Awards in 2020. Sindabad has now taken steps towards giving B2C customers, convenient solutions to grocery shopping with complete transparency, a wider variety of products, quality assurance guarantee, logistics, and delivery solutions. We are entrepreneurs, visionaries, data hounds, IT technicians, relationship builders, and storytellers re-imagining how tomorrow’s workforce works. Collectively
+
+Product No: 1 "Product Type: Blender", "Brand: Sharp", "Origin: Japan", "Model: EM-100PM-ST", "Capacity: 1 Liter", "Color: Stainless Steel", "Warranty & Services: Free Service: 1 Year" Product No: 2 "Product Type: Blender", "Brand: Sharp", "Origin: Japan","Model: EM-181-GR","Color: Green", "Warranty & Services: Free Service: 1 Year" Product No: 3 "Product Type: Grinder & Juicer", "Color: Silver", "Size: 10.5X10.5X28.5", "Good Quality" Product No: 4 "Product Type: Blender", "Brand: Sharp", "Origin: Japan", "Model: EM-60PM-WH", "Capacity: 0.6 Liter", "Color: White", "Warranty & Services: Free Service: 1 Year" Product No: 5 "Product Type: Electric Garlic Masher", "Material: PC, PP plastic", "Color: white, pink, green", "Power: USB charging" Washers & Dryers: Washing Machine Product No: 1 "Product Type: Washing Machine", "Brand: Haier", "Model: HW80-BP12929S3", "Capacity: 8Kg", "Color: Ore Silver", "Warranty:", "Motor: Lifetime", "Parts & Service: 1 Year" Product No: 2 "Product Type: Washi
+
+ailure)" Product No: 4 "Product Type: LED TV", "Brand: Haier", "Model: H43K6FG", "Screen Size: 43 Inch", "Type: DLED", "System of Digital TV: T2", "System of Analog TV: PAL/SECAM", "Smart TV OS: Android 11.0 (Licensed)", "Warranty: "Panel: 4 Years", "Parts and Service: 2 Years", "TV Replacement Guarantee: 6 Months (In case of panel failure)" Product No: 5 "Product Type: LED TV", "Brand: Haier", "Model: H55S6UG PRO", "Screen Size: 55 Inch", "Type: 4K UHD", "System of Digital TV (Video / Audio): DVB-T+C+T2 H.265 S2", "System of Analog TV (Video / Audio): PAL/SECAM/NTSC", "Smart TV OS: Android 11.0 (Licensed)", "Warranty: "Panel: 4 Years", "Parts and Service: 2 Years", "TV Replacement Guarantee: 6 Months (In case of panel failure)" Product No: 6 "Product Type: LED TV", "Brand: Haier", "Model: H50K66UG", "Screen Size: 50 Inch", "Screen Size: 50\"", "Type: 4K UHD", "System of Digital TV: DVB-T+C+T2 H.265 S2", "System of Analog TV: PAL", "Smart TV OS: Android 11 (Licensed)", "Warranty: "Pane
+
+    Human: Standalone question: Hello! How can I assist you today, Mahmud?
+    Assistant:
+
+> Finished chain.
+
+> Finished chain.
+COST:
+Tokens Used: 1458
+        Prompt Tokens: 1430
+        Completion Tokens: 28
+Successful Requests: 2
+Total Cost (USD): $0.0022010000000000003
+{'Page = 1.0': 'Text chunk: Product Details of Sindabad.Com About Sindabad.com: Sindabad.com is one of the leading e-Commerce platforms in Bangladesh where you can find anything and everyt...\n', 'Page = 5.0': 'Text chunk: Product No: 1 "Product Type: Blender", "Brand: Sharp", "Origin: Japan", "Model: EM-100PM-ST", "Capacity: 1 Liter", "Color: Stainless Steel", "Warranty & Service...\n', 'Page = 6.0': 'Text chunk: ailure)" Product No: 4 "Product Type: LED TV", "Brand: Haier", "Model: H43K6FG", "Screen Size: 43 Inch", "Type: DLED", "System of Digital TV: T2", "System of An...\n'}
+
+
+> Entering new  chain...
+Prompt after formatting:
+Combine the chat history and follow up question into /
+        a standalone question. /
+        Chat History:
+Human: Hello
+Assistant: Hello! How can I assist you today?
+Human: I'm Mahmud. How are you today?
+Assistant: Hello! How can I assist you today, Mahmud?
+        Follow up question: I want to buy a phone for my mom. I want an android phone specifically. Which brands do you suggest?
+
+Retrying langchain.chat_models.openai.ChatOpenAI.completion_with_retry.<locals>._completion_with_retry in 1.0 seconds as it raised ServiceUnavailableError: The server is overloaded or not ready yet..
+
+> Finished chain.
+
+
+> Entering new  chain...
+
+
+> Entering new  chain...
+Prompt after formatting:
+You are a helpful AI assistant that answers questions about an e-commerce company called "Sindabad.com" /
+    in a friendly and polite manner. You will be given a "Context" that will represent Sindabad.com's product inventory./
+    Users might ask about products, they might want to know your suggestions as well. Most importantly, they might ask about specific product and/
+    its associated product link. If they want to know about product links, you will provide it accordingly with the /
+    help of the given "Context". It should be noted, only the Mobile Phones sub category has product links in them,/
+    therefore, should the users ask a different product and want to know their product links you should tell them,/
+    "Only the mobile phones section has product links at the moment, in future additional sections will have product/
+    links in them". Answer the question in your own words as truthfully as possible from the context given to you./
+    If you do not know the answer to the question, simply respond with "I don't know. Could you please rephrase the/
+    question?". If questions are asked where there is no relevant information available in the context /
+    , answer the question with your existing knowledge on that question and "ignore" the "Context" given to you.
+
+    Context:
+ "Product link: https://sindabad.com/samsung-galaxy-a23-ram-6gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy A23", "Released 2022, March 25", "195g, 8.4mm thickness", "Android 12, up to Android 13, One UI 5", "6GB/128GB storage, microSDXC", "6.6\" 1080x2408 pixels", "50MP 1080p", "22% 3,080,106 HITS", "6GB/128GB RAM Snapdragon 680 4G", "142 Brecome a Fan", "5000mAh Li-Po", "Color: Black, White, Peach, Blue", "Warranty: 1 Year Official Warranty" Product No: 16 "Product link: https://sindabad.com/samsung-galaxy-m53-5g-ram-8gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy M53 5G", "Released 2022, April 22", "176g, 7.4mm thickness", "Android 12, up to Android 13, One UI 5.1", "8GB/128GB storage, microSDXC", "6.7 Inch 1080x2408 pixels", "108MP 2160p", "8.6% 1,664,135 HITS", "8GB/128GB Ram", "135 Become a Fan", "5000mAh Li-Ion", "Color: Green, Blue, Brown", "Warranty: 1 Year Official Warranty" Product No: 17 "Product link: https://sindabad.co
+
+Type: Mobile phone", "Brand: Vivo", "Model: Vivo X80", "Released 2022, April 29", "203g / 206g, 8.3mm thickness", "Android 12, Funtouch 12, Origin OS Ocean", "256GB/512GB storage, no card slot", "Technology : GSM / CDMA / HSPA / CDMA2000 / LTE / 5G", "Colors: Cosmic Black, Urban Blue, Orange", "Warranty: 1 Year Official Warranty" Product No: 19 "Product link: https://sindabad.com/oneplus-nord-ce-3-lite-5g-8gb-128gb-chromatic-gray", "Product Type: Mobile Phone", "Brand: OnePlus", "Color: Chromatic Gray", "RAM + ROM: 8GB + 128GB", "Camera: Rear- 108MP, Front- 16MP", "Display: 6.72 inches", "Resolution: 2400 x 1080 pixels", "Warranty: 12 Months" Product No: 20 "Product link: https://sindabad.com/nokia-1-4-3-64-gb", "Product Type: Mobile", "Brand: Nokia", "Model: Nokia 1.4", "Released 2021, February 03", "178g, 8.7mm thickness", "Android 10, planned upgrade to Android 11", "3/64 GB", "6.52 Inch 720x1600 pixels", "8MP 720p", "1.4% 654,529 HITS", "43 Become a Fan", "4000mAh Li-Po", "Color: F
+
+80p", "5.5% 1,418,532 HITS", "2GB/32GB RAM Unisoc SC9863A", "60 Brecome a Fan", "5000mAh Li-Ion", "Color:Black, Blue", "Warranty: 1 Year Official Warranty" Product No: 6 "Product link: https://sindabad.com/samsung-galaxy-m12-ram-6gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy M12", "Released 2021, April 30", "212g, 9.7mm thickness", "Android 11, One UI Core 3.1", "6GB/128GB storage, microSDXC", "6.5 Inch 720x1600 pixels", "48MP 1080p", "2.8% 1,825,368 HITS", "6GB/128GB RAM", "52 Become a Fan", "5000mAh Li-Po", "Color: Black, Blue, Green", "Warranty: 1 Year Official Warranty" Product No: 7 "Product link: https://sindabad.com/samsung-galaxy-a52s-5g-ram-8gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy A52s 5G", "Released 2021, September 01", "189g, 8.4mm thickness", "Android 11, up to Android 13, One UI 5", "8GB/128GB storage, microSDXC", "6.5 Inch1080x2400 pixels", "64MP 2160p", "17% 7,921,372 HITS", "8GB/128GB Ram", "1042 Become a Fan
+
+"Product link: https://sindabad.com/oneplus-10-pro-5g-16gb-256gb-volcanic-black", "Product Type: Mobile Phone", "Brand: OnePlus", "Color: Volcanic Black", "RAM + ROM: 12GB + 256GB", "Camera: Rear- 50MP, Front- 8MP", "Display: 6.7 inches", "Resolution: 3216 X 1440 pixels", "Warranty: 12 Months" Product No: 10 "Product link: https://sindabad.com/techno-pop-6-pro-2gb-ram-32gb-rom", "Product Type: Mobile Phone", "Brand: Tecno", "Model: POP 6 Pro", "Chipset: Mediatek Helio A22 (12 nm)", "CPU: Quad-core 2.0 GHz Cortex-A53", "GPU: PowerVR GE8320", "Card: microSDXC", "Builtin: 32GB 2GB RAM", "Display Type: IPS LCD, 480 nits (peak)", "Screen Size: 6.56 inches, 103.4 cm2 (~82.2% screen-to-body ratio)", "Warranty: 13 Months", "Authorized By Techno Mobile Bangladesh" Product No: 11 "Product link: https://sindabad.com/maximus-m25i-feature-phone-assorted-color", "Product Type: Feature Phone", "Brand: Maximus", "Model: Maximus M25i", "Variant: Folding Phone", "Display: 2.4 QVGA", "Color: Royal Blue,
+
+    Human: Which brands of Android phones do you suggest for buying a phone for my mom?
+    Assistant:
+
+> Finished chain.
+
+> Finished chain.
+COST:
+Tokens Used: 1931
+        Prompt Tokens: 1877
+        Completion Tokens: 54
+Successful Requests: 2
+Total Cost (USD): $0.0029235
+{'Page = 12.0': 'Text chunk: Type: Mobile phone", "Brand: Vivo", "Model: Vivo X80", "Released 2022, April 29", "203g / 206g, 8.3mm thickness", "Android 12, Funtouch 12, Origin OS Ocean", "2...\n', 'Page = 10.0': 'Text chunk: 80p", "5.5% 1,418,532 HITS", "2GB/32GB RAM Unisoc SC9863A", "60 Brecome a Fan", "5000mAh Li-Ion", "Color:Black, Blue", "Warranty: 1 Year Official Warranty" Prod...\n', 'Page = 11.0': 'Text chunk: "Product link: https://sindabad.com/oneplus-10-pro-5g-16gb-256gb-volcanic-black", "Product Type: Mobile Phone", "Brand: OnePlus", "Color: Volcanic Black", "RAM ...\n'}
+
+
+> Entering new  chain...
+Prompt after formatting:
+Combine the chat history and follow up question into /
+        a standalone question. /
+        Chat History:
+Human: Hello
+Assistant: Hello! How can I assist you today?
+Human: I'm Mahmud. How are you today?
+Assistant: Hello! How can I assist you today, Mahmud?
+Human: I want to buy a phone for my mom. I want an android phone specifically. Which brands do you suggest?
+Assistant: For buying a phone for your mom, I would suggest considering brands like Samsung, Vivo, and Nokia. These brands offer a wide range of Android phones with user-friendly interfaces and reliable performance.
+        Follow up question: I want to know more about samsung phones. Could you list some options?
+
+
+> Finished chain.
+
+
+> Entering new  chain...
+
+
+> Entering new  chain...
+Prompt after formatting:
+You are a helpful AI assistant that answers questions about an e-commerce company called "Sindabad.com" /
+    in a friendly and polite manner. You will be given a "Context" that will represent Sindabad.com's product inventory./
+    Users might ask about products, they might want to know your suggestions as well. Most importantly, they might ask about specific product and/
+    its associated product link. If they want to know about product links, you will provide it accordingly with the /
+    help of the given "Context". It should be noted, only the Mobile Phones sub category has product links in them,/
+    therefore, should the users ask a different product and want to know their product links you should tell them,/
+    "Only the mobile phones section has product links at the moment, in future additional sections will have product/
+    links in them". Answer the question in your own words as truthfully as possible from the context given to you./
+    If you do not know the answer to the question, simply respond with "I don't know. Could you please rephrase the/
+    question?". If questions are asked where there is no relevant information available in the context /
+    , answer the question with your existing knowledge on that question and "ignore" the "Context" given to you.
+
+    Context:
+ "Product link: https://sindabad.com/samsung-galaxy-a23-ram-6gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy A23", "Released 2022, March 25", "195g, 8.4mm thickness", "Android 12, up to Android 13, One UI 5", "6GB/128GB storage, microSDXC", "6.6\" 1080x2408 pixels", "50MP 1080p", "22% 3,080,106 HITS", "6GB/128GB RAM Snapdragon 680 4G", "142 Brecome a Fan", "5000mAh Li-Po", "Color: Black, White, Peach, Blue", "Warranty: 1 Year Official Warranty" Product No: 16 "Product link: https://sindabad.com/samsung-galaxy-m53-5g-ram-8gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy M53 5G", "Released 2022, April 22", "176g, 7.4mm thickness", "Android 12, up to Android 13, One UI 5.1", "8GB/128GB storage, microSDXC", "6.7 Inch 1080x2408 pixels", "108MP 2160p", "8.6% 1,664,135 HITS", "8GB/128GB Ram", "135 Become a Fan", "5000mAh Li-Ion", "Color: Green, Blue, Brown", "Warranty: 1 Year Official Warranty" Product No: 17 "Product link: https://sindabad.co
+
+80p", "5.5% 1,418,532 HITS", "2GB/32GB RAM Unisoc SC9863A", "60 Brecome a Fan", "5000mAh Li-Ion", "Color:Black, Blue", "Warranty: 1 Year Official Warranty" Product No: 6 "Product link: https://sindabad.com/samsung-galaxy-m12-ram-6gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy M12", "Released 2021, April 30", "212g, 9.7mm thickness", "Android 11, One UI Core 3.1", "6GB/128GB storage, microSDXC", "6.5 Inch 720x1600 pixels", "48MP 1080p", "2.8% 1,825,368 HITS", "6GB/128GB RAM", "52 Become a Fan", "5000mAh Li-Po", "Color: Black, Blue, Green", "Warranty: 1 Year Official Warranty" Product No: 7 "Product link: https://sindabad.com/samsung-galaxy-a52s-5g-ram-8gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy A52s 5G", "Released 2021, September 01", "189g, 8.4mm thickness", "Android 11, up to Android 13, One UI 5", "8GB/128GB storage, microSDXC", "6.5 Inch1080x2400 pixels", "64MP 2160p", "17% 7,921,372 HITS", "8GB/128GB Ram", "1042 Become a Fan
+
+"50MP 2160p", "8.3% 1,103,769 HITS", "6GB/128GB Ram", "89 Become a Fan", "5000mAh Li-Po", "Aqua Blue, Forest Green", "Warranty: 1 Year Official Warranty" Product No: 27 "Product link: https://sindabad.com/samsung-galaxy-s21-fe-5g-ram-8gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy S21 FE 5G", "Released 2022, January 07", "177g, 7.9mm thickness", "Android 12, up to Android 13, One UI 5.1", "8GB/128GB storage, no card slot", "6.4 Inch 1080x2340 pixels", "12MP 2160p", "33% 5,879,623 HITS", "8GB/128GB Ram", "694 Become a Fan", "4500mAh Li-Ion\u00a0", "Color: White, Graphite, Lavender, Olive", "Warranty: 1 Year Official Warranty" Product No: 28 "Product link: https://sindabad.com/vivo-y33s-8gb-128gb", "Product Type: Mobile phone", "Brand: Vivo", "Model: V25e", "Released 2021, August 24", "182g, 8mm thickness", "Android 11, Funtouch 11.1", "64GB/128GB storage, microSDXC", "Sensors : Fingerprint (side-mounted), accelerometer, gyro, proximity, compass", "Colour:Mirro
+
+g, 9.1mm thickness", "Android 13, One UI Core 5", "64GB/128GB storage, microSDXC" Product No: 2 "Product link: https://sindabad.com/tecno-spark-10c-8gm-ram-128gb-rom", "Product Type: Mobile Phone", "Brand: Tecno", "Model: Spark 10C", "Chipset: Unisoc Tiger T606", "CPU: Octa-core (1.61 GHz Cortex A75 & X.X GHz Cortex A55)", "GPU: Mali-G57 MC2", "Card: microSDXC", "Builtin: 128GB 8GB RAM", "Display Type: IPS LCD, 90Hz", "Screen Size: 6.6 inches, 104.6 cm2 (~84.6% screen-to-body ratio)", "Warranty: 13 Months", "Authorized By Techno Mobile Bangladesh" Product No: 3 "Product link: https://sindabad.com/samsung-galaxy-s22-ultra-ram-12gb-256gb", "Product Type: Mobile phone", "Brand: Samsung", "Model:Galaxy S22", "Released 2022, February 25", "228g / 229g (mmWave), 8.9mm thickness", "Android 12, up to Android 13, One UI 5.1", "12GB/256GB storage, no card slot", "6.8 Inch 1440x3088 pixels", "108MP 4320p", "32% 10,548,866 HITS", "12GB/256GB Ram",
+
+    Human: Standalone question: Can you provide me with a list of Samsung phone options?
+    Assistant:
+
+> Finished chain.
+
+> Finished chain.
+COST:
+Tokens Used: 2045
+        Prompt Tokens: 1946
+        Completion Tokens: 99
+Successful Requests: 2
+Total Cost (USD): $0.003117
+{'Page = 12.0': 'Text chunk: "Product link: https://sindabad.com/samsung-galaxy-a23-ram-6gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy A23", "Released 2022, Marc...\n', 'Page = 10.0': 'Text chunk: 80p", "5.5% 1,418,532 HITS", "2GB/32GB RAM Unisoc SC9863A", "60 Brecome a Fan", "5000mAh Li-Ion", "Color:Black, Blue", "Warranty: 1 Year Official Warranty" Prod...\n', 'Page = 14.0': 'Text chunk: "50MP 2160p", "8.3% 1,103,769 HITS", "6GB/128GB Ram", "89 Become a Fan", "5000mAh Li-Po", "Aqua Blue, Forest Green", "Warranty: 1 Year Official Warranty" Produc...\n', 'Page = 9.0': 'Text chunk: g, 9.1mm thickness", "Android 13, One UI Core 5", "64GB/128GB storage, microSDXC" Product No: 2 "Product link: https://sindabad.com/tecno-spark-10c-8gm-ram-128g...\n'}
+
+
+> Entering new  chain...
+Prompt after formatting:
+Combine the chat history and follow up question into /
+        a standalone question. /
+        Chat History:
+Human: I'm Mahmud. How are you today?
+Assistant: Hello! How can I assist you today, Mahmud?
+Human: I want to buy a phone for my mom. I want an android phone specifically. Which brands do you suggest?
+Assistant: For buying a phone for your mom, I would suggest considering brands like Samsung, Vivo, and Nokia. These brands offer a wide range of Android phones with user-friendly interfaces and reliable performance.
+Human: I want to know more about samsung phones. Could you list some options?
+Assistant: Sure! Here are some Samsung phone options available on Sindabad.com:
+1. Samsung Galaxy A23
+2. Samsung Galaxy M53 5G
+3. Samsung Galaxy M12
+4. Samsung Galaxy A52s 5G
+5. Samsung Galaxy S21 FE 5G
+6. Samsung Galaxy S22 Ultra
+
+Please let me know if you would like more information about any specific model.
+        Follow up question: Nice! From these models which one do you suggest would be the best for my mom.
+
+
+> Finished chain.
+
+
+> Entering new  chain...
+
+
+> Entering new  chain...
+Prompt after formatting:
+You are a helpful AI assistant that answers questions about an e-commerce company called "Sindabad.com" /
+    in a friendly and polite manner. You will be given a "Context" that will represent Sindabad.com's product inventory./
+    Users might ask about products, they might want to know your suggestions as well. Most importantly, they might ask about specific product and/
+    its associated product link. If they want to know about product links, you will provide it accordingly with the /
+    help of the given "Context". It should be noted, only the Mobile Phones sub category has product links in them,/
+    therefore, should the users ask a different product and want to know their product links you should tell them,/
+    "Only the mobile phones section has product links at the moment, in future additional sections will have product/
+    links in them". Answer the question in your own words as truthfully as possible from the context given to you./
+    If you do not know the answer to the question, simply respond with "I don't know. Could you please rephrase the/
+    question?". If questions are asked where there is no relevant information available in the context /
+    , answer the question with your existing knowledge on that question and "ignore" the "Context" given to you.
+
+    Context:
+ "Product link: https://sindabad.com/samsung-galaxy-a23-ram-6gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy A23", "Released 2022, March 25", "195g, 8.4mm thickness", "Android 12, up to Android 13, One UI 5", "6GB/128GB storage, microSDXC", "6.6\" 1080x2408 pixels", "50MP 1080p", "22% 3,080,106 HITS", "6GB/128GB RAM Snapdragon 680 4G", "142 Brecome a Fan", "5000mAh Li-Po", "Color: Black, White, Peach, Blue", "Warranty: 1 Year Official Warranty" Product No: 16 "Product link: https://sindabad.com/samsung-galaxy-m53-5g-ram-8gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy M53 5G", "Released 2022, April 22", "176g, 7.4mm thickness", "Android 12, up to Android 13, One UI 5.1", "8GB/128GB storage, microSDXC", "6.7 Inch 1080x2408 pixels", "108MP 2160p", "8.6% 1,664,135 HITS", "8GB/128GB Ram", "135 Become a Fan", "5000mAh Li-Ion", "Color: Green, Blue, Brown", "Warranty: 1 Year Official Warranty" Product No: 17 "Product link: https://sindabad.co
+
+80p", "5.5% 1,418,532 HITS", "2GB/32GB RAM Unisoc SC9863A", "60 Brecome a Fan", "5000mAh Li-Ion", "Color:Black, Blue", "Warranty: 1 Year Official Warranty" Product No: 6 "Product link: https://sindabad.com/samsung-galaxy-m12-ram-6gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy M12", "Released 2021, April 30", "212g, 9.7mm thickness", "Android 11, One UI Core 3.1", "6GB/128GB storage, microSDXC", "6.5 Inch 720x1600 pixels", "48MP 1080p", "2.8% 1,825,368 HITS", "6GB/128GB RAM", "52 Become a Fan", "5000mAh Li-Po", "Color: Black, Blue, Green", "Warranty: 1 Year Official Warranty" Product No: 7 "Product link: https://sindabad.com/samsung-galaxy-a52s-5g-ram-8gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy A52s 5G", "Released 2021, September 01", "189g, 8.4mm thickness", "Android 11, up to Android 13, One UI 5", "8GB/128GB storage, microSDXC", "6.5 Inch1080x2400 pixels", "64MP 2160p", "17% 7,921,372 HITS", "8GB/128GB Ram", "1042 Become a Fan
+
+g, 9.1mm thickness", "Android 13, One UI Core 5", "64GB/128GB storage, microSDXC" Product No: 2 "Product link: https://sindabad.com/tecno-spark-10c-8gm-ram-128gb-rom", "Product Type: Mobile Phone", "Brand: Tecno", "Model: Spark 10C", "Chipset: Unisoc Tiger T606", "CPU: Octa-core (1.61 GHz Cortex A75 & X.X GHz Cortex A55)", "GPU: Mali-G57 MC2", "Card: microSDXC", "Builtin: 128GB 8GB RAM", "Display Type: IPS LCD, 90Hz", "Screen Size: 6.6 inches, 104.6 cm2 (~84.6% screen-to-body ratio)", "Warranty: 13 Months", "Authorized By Techno Mobile Bangladesh" Product No: 3 "Product link: https://sindabad.com/samsung-galaxy-s22-ultra-ram-12gb-256gb", "Product Type: Mobile phone", "Brand: Samsung", "Model:Galaxy S22", "Released 2022, February 25", "228g / 229g (mmWave), 8.9mm thickness", "Android 12, up to Android 13, One UI 5.1", "12GB/256GB storage, no card slot", "6.8 Inch 1440x3088 pixels", "108MP 4320p", "32% 10,548,866 HITS", "12GB/256GB Ram",
+
+ed 2021, August 24", "182g, 8mm thickness", "Android 11, Funtouch 11.1", "64GB/128GB storage, microSDXC", "Sensors : Fingerprint (side-mounted), accelerometer, gyro, proximity, compass", "Colour:Mirror Black, Midday Dream", "Warranty: 1 Year Official Warranty" Product No: 29 "Product link: https://sindabad.com/oneplus-nord-n20-se-4gb-64gb-celestial-black", "Product Type: Mobile Phone", "Brand: OnePlus", "Color: Celestial Black", "RAM + ROM: 4GB + 64GB", "Camera: Rear50MP, Front- 8MP", "Display: 6.56 inches", "Resolution: HD+(16127720) pixels", "Warranty: 12 Months" Product No: 30 "Product link: https://sindabad.com/samsung-galaxy-s23-ultra-5g-12gb-512gb", "Product Type: Mobile Phone", "Brand: Samsung", "Released 2023, February 17", "234g, 8.9mm thickness", "Android 13, One UI 5.1", "512GB, no card slot", "12GB RAM Snapdragon 8 Gen 2", "Resolution: 1440 x 3088 pixels (~500 ppi density)", "Loudspeaker: -25.6 LUFS (Very good)", "Battery life : 5000mAh,Endurance rating 126h 2707", "Colors:
+
+    Human: Which Samsung phone model would you suggest as the best option for my mom from the list provided?
+    Assistant:
+
+> Finished chain.
+
+> Finished chain.
+COST:
+Tokens Used: 2122
+        Prompt Tokens: 2012
+        Completion Tokens: 110
+Successful Requests: 2
+Total Cost (USD): $0.003238
+{'Page = 12.0': 'Text chunk: "Product link: https://sindabad.com/samsung-galaxy-a23-ram-6gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy A23", "Released 2022, Marc...\n', 'Page = 10.0': 'Text chunk: 80p", "5.5% 1,418,532 HITS", "2GB/32GB RAM Unisoc SC9863A", "60 Brecome a Fan", "5000mAh Li-Ion", "Color:Black, Blue", "Warranty: 1 Year Official Warranty" Prod...\n', 'Page = 9.0': 'Text chunk: g, 9.1mm thickness", "Android 13, One UI Core 5", "64GB/128GB storage, microSDXC" Product No: 2 "Product link: https://sindabad.com/tecno-spark-10c-8gm-ram-128g...\n', 'Page = 14.0': 'Text chunk: ed 2021, August 24", "182g, 8mm thickness", "Android 11, Funtouch 11.1", "64GB/128GB storage, microSDXC", "Sensors : Fingerprint (side-mounted), accelerometer, ...\n'}
+
+
+> Entering new  chain...
+Prompt after formatting:
+Combine the chat history and follow up question into /
+        a standalone question. /
+        Chat History:
+Human: I want to buy a phone for my mom. I want an android phone specifically. Which brands do you suggest?
+Assistant: For buying a phone for your mom, I would suggest considering brands like Samsung, Vivo, and Nokia. These brands offer a wide range of Android phones with user-friendly interfaces and reliable performance.
+Human: I want to know more about samsung phones. Could you list some options?
+Assistant: Sure! Here are some Samsung phone options available on Sindabad.com:
+1. Samsung Galaxy A23
+2. Samsung Galaxy M53 5G
+3. Samsung Galaxy M12
+4. Samsung Galaxy A52s 5G
+5. Samsung Galaxy S21 FE 5G
+6. Samsung Galaxy S22 Ultra
+
+Please let me know if you would like more information about any specific model.
+Human: Nice! From these models which one do you suggest would be the best for my mom.
+Assistant: Based on the list provided, I would suggest the Samsung Galaxy A52s 5G as the best option for your mom. It has a good camera with 64MP resolution, a large 6.5-inch display, and a long-lasting 5000mAh battery. It also has 8GB of RAM and 128GB of storage, which should be sufficient for most users. Additionally, it comes with a 1-year official warranty.
+        Follow up question: Can you give me the product link of this phone?
+
+Retrying langchain.chat_models.openai.ChatOpenAI.completion_with_retry.<locals>._completion_with_retry in 1.0 seconds as it raised ServiceUnavailableError: The server is overloaded or not ready yet..
+
+> Finished chain.
+
+
+> Entering new  chain...
+
+
+> Entering new  chain...
+Prompt after formatting:
+You are a helpful AI assistant that answers questions about an e-commerce company called "Sindabad.com" /
+    in a friendly and polite manner. You will be given a "Context" that will represent Sindabad.com's product inventory./
+    Users might ask about products, they might want to know your suggestions as well. Most importantly, they might ask about specific product and/
+    its associated product link. If they want to know about product links, you will provide it accordingly with the /
+    help of the given "Context". It should be noted, only the Mobile Phones sub category has product links in them,/
+    therefore, should the users ask a different product and want to know their product links you should tell them,/
+    "Only the mobile phones section has product links at the moment, in future additional sections will have product/
+    links in them". Answer the question in your own words as truthfully as possible from the context given to you./
+    If you do not know the answer to the question, simply respond with "I don't know. Could you please rephrase the/
+    question?". If questions are asked where there is no relevant information available in the context /
+    , answer the question with your existing knowledge on that question and "ignore" the "Context" given to you.
+
+    Context:
+ 80p", "5.5% 1,418,532 HITS", "2GB/32GB RAM Unisoc SC9863A", "60 Brecome a Fan", "5000mAh Li-Ion", "Color:Black, Blue", "Warranty: 1 Year Official Warranty" Product No: 6 "Product link: https://sindabad.com/samsung-galaxy-m12-ram-6gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy M12", "Released 2021, April 30", "212g, 9.7mm thickness", "Android 11, One UI Core 3.1", "6GB/128GB storage, microSDXC", "6.5 Inch 720x1600 pixels", "48MP 1080p", "2.8% 1,825,368 HITS", "6GB/128GB RAM", "52 Become a Fan", "5000mAh Li-Po", "Color: Black, Blue, Green", "Warranty: 1 Year Official Warranty" Product No: 7 "Product link: https://sindabad.com/samsung-galaxy-a52s-5g-ram-8gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy A52s 5G", "Released 2021, September 01", "189g, 8.4mm thickness", "Android 11, up to Android 13, One UI 5", "8GB/128GB storage, microSDXC", "6.5 Inch1080x2400 pixels", "64MP 2160p", "17% 7,921,372 HITS", "8GB/128GB Ram", "1042 Become a Fan
+
+"Product link: https://sindabad.com/samsung-galaxy-a23-ram-6gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy A23", "Released 2022, March 25", "195g, 8.4mm thickness", "Android 12, up to Android 13, One UI 5", "6GB/128GB storage, microSDXC", "6.6\" 1080x2408 pixels", "50MP 1080p", "22% 3,080,106 HITS", "6GB/128GB RAM Snapdragon 680 4G", "142 Brecome a Fan", "5000mAh Li-Po", "Color: Black, White, Peach, Blue", "Warranty: 1 Year Official Warranty" Product No: 16 "Product link: https://sindabad.com/samsung-galaxy-m53-5g-ram-8gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy M53 5G", "Released 2022, April 22", "176g, 7.4mm thickness", "Android 12, up to Android 13, One UI 5.1", "8GB/128GB storage, microSDXC", "6.7 Inch 1080x2408 pixels", "108MP 2160p", "8.6% 1,664,135 HITS", "8GB/128GB Ram", "135 Become a Fan", "5000mAh Li-Ion", "Color: Green, Blue, Brown", "Warranty: 1 Year Official Warranty" Product No: 17 "Product link: https://sindabad.co
+
+"1510 Become a Fan", "5000mAh Li-Ion", "Color: Phantom Black, White, Burgundy, Green, Graphite, Red, Sky Blue, Bora Purple", "Warranty: 1 Year Official Warranty" Product No: 4 "Product link: https://sindabad.com/maximus-feature-phone-a10", "Product Type: Feature Phone", "Brand: Maximus", "Model: Maximus A10", "Display: 1.8 QVGA", "Color: Skyler White, Tiger Black, Champagne Blue", "Battery: 1000 mAh Removable Li-Ion (Lithium Ion) Battery", "Network: 2G GSM 900/1800 MHz", "Warranty: 1 Year Warranty" Product No: 5 "Product link: https://sindabad.com/samsung-galaxy-a03-core-ram-2gb-32gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy A03 Core,", "Released 2021, December 06", "211g, 9.1mm thickness", "Android 11", "2GB/32GB storage, microSDXC", "6.5\" 720x1600 pixels", "8MP 1080p", "5.5% 1,418,532 HITS", "2GB/32GB RAM Unisoc SC9863A", "60 Brecome a Fan", "5000mAh Li-Ion", "Color:Black, Blue", "Warranty: 1 Year Official Warranty" Product No: 6 "Product link: https://sindaba
+
+12MP camera \u0192/1.9 aperture", "Battery Type: Li-Ion 4323mAh", "Backup: Up to 29 hours (video playback)", "Warranty: 1 year Apple Official Bangladesh and International Warranty" Product No: 25 "Product link: https://sindabad.com/samsung-galaxy-f13-ram-4gb-64gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy F13", "Released 2022, June 29", "207g, 9.3mm thickness", "Android 12, up to Android 13, One UI Core 5", "4GB/64GB storage, microSDXC", "6.6\" 1080x2408 pixels", "50MP 1080p", "3.9% 611,775 HITS", "4GB/64GB RAM Exynos 850", "34 Brecome a Fan", "6000mAhLi-Po", "Color: Waterfall Blue, Sunrise Copper, Nightsky Green", "Warranty: 1 YearOfficial Warranty" Product No: 26 "Product link: https://sindabad.com/samsung-galaxy-f23-5g-ram-6gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy F23 5G", "Released 2022, March 16", "198g, 8.4mm thickness", "Android 12, One UI 4.1", "6GB/128GBstorage, microSDXC", "6.6 Inch 1080x2408 pixels",
+
+    Human: Sure! Here is the product link for the Samsung Galaxy A52s 5G on Sindabad.com: [Product Link](insert link here)
+    Assistant:
+
+> Finished chain.
+
+> Finished chain.
+COST:
+Tokens Used: 2187
+        Prompt Tokens: 2107
+        Completion Tokens: 80
+Successful Requests: 2
+Total Cost (USD): $0.0033204999999999997
+{'Page = 10.0': 'Text chunk: "1510 Become a Fan", "5000mAh Li-Ion", "Color: Phantom Black, White, Burgundy, Green, Graphite, Red, Sky Blue, Bora Purple", "Warranty: 1 Year Official Warranty...\n', 'Page = 12.0': 'Text chunk: "Product link: https://sindabad.com/samsung-galaxy-a23-ram-6gb-128gb", "Product Type: Mobile phone", "Brand: Samsung", "Model: Galaxy A23", "Released 2022, Marc...\n', 'Page = 13.0': 'Text chunk: 12MP camera \\u0192/1.9 aperture", "Battery Type: Li-Ion 4323mAh", "Backup: Up to 29 hours (video playback)", "Warranty: 1 year Apple Official Bangladesh and Int...\n'}
