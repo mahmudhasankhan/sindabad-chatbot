@@ -14,14 +14,6 @@ from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
 
-def init_memory():
-    return ConversationBufferWindowMemory(input_key="question",
-                                          memory_key="chat_history",
-                                          k=3,
-                                          return_messages=True,
-                                          output_key="answer")
-
-
 def make_chain(pinecone_index: str) -> ConversationalRetrievalChain:
     # initialize model
     model = ChatOpenAI(temperature=0.0)
@@ -64,7 +56,11 @@ def make_chain(pinecone_index: str) -> ConversationalRetrievalChain:
         Follow up question: {question}
         """
     )
-    memory = init_memory()
+    memory = ConversationBufferWindowMemory(input_key="question",
+                                            memory_key="chat_history",
+                                            k=3,
+                                            return_messages=True,
+                                            output_key="answer")
     return ConversationalRetrievalChain.from_llm(model,
                                                  retriever=vector_store.as_retriever(),
                                                  return_source_documents=True,
