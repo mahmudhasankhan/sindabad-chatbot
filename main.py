@@ -2,7 +2,6 @@ import uvicorn
 from fastapi import FastAPI
 from chain import make_chain
 from schemas import ChatResponse
-from langchain.callbacks import get_openai_callback
 
 
 app = FastAPI()
