@@ -13,7 +13,7 @@ async def root():
     return {"message": "Hello! How can I help?"}
 
 
-@app.get("/chat/{user_question}")
+@app.post("/chat")
 async def get_chat_response(user_question: str) -> dict:
 
     chain = make_chain("sindabad")
