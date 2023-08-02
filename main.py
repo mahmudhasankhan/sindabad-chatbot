@@ -13,11 +13,9 @@ async def root():
 
 
 @app.post("/chat")
-async def get_chat_response(user_question: str) -> dict:
+async def get_chat_response(question: ChatResponse) -> dict:
 
     chain = make_chain("sindabad")
-
-    question = ChatResponse(sender="human", message=user_question)
 
     try:
         response = chain({"question": question.message})
