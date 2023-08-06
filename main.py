@@ -72,7 +72,6 @@ async def websocket_endpoint(websocket: WebSocket):
             _ = await chain.acall(
                 {"question": question}
             )
-            # chat_history.append((question, result["answer"]))
 
             end_resp = ChatResponse(
                 sender="bot",
