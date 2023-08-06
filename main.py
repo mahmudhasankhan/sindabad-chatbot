@@ -4,7 +4,7 @@ import pinecone
 
 from typing import Optional
 from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
-from fastapi.templating import JinjaTemplates
+from fastapi.templating import Jinja2Templates
 from callback import QuestionGenCallbackHandler, StreamingLLMCallbackHandler
 from chain import callback_chain
 from schemas import ChatResponse
@@ -13,7 +13,7 @@ from dotenv import load_dotenv, find_dotenv
 from langchain.vectorstores import Pinecone
 
 app = FastAPI()
-templates = JinjaTemplates(directory="templates\\")
+templates = Jinja2Templates(directory="templates\\")
 vectorestore: Optional[Pinecone] = None
 pinecone_index = "sindabad"
 
@@ -119,7 +119,7 @@ async def websocket_endpoint(websocket: WebSocket):
 
 def main():
     import uvicorn
-    uvicorn.run("main:app", host="127.0.0.1", port=9000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=9000, reload=False)
 
 
 if __name__ == "__main__":

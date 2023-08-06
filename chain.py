@@ -6,11 +6,11 @@ from langchain.vectorstores import Pinecone
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.prompts import PromptTemplate
-from langchain.memory import ConversationBufferWindowMemory
+# from langchain.memory import ConversationBufferWindowMemory
 
 from dotenv import load_dotenv, find_dotenv
 
-from langchain.callbacks.manager import AsyncCallbackHandler
+from langchain.callbacks.base import AsyncCallbackHandler
 from langchain.callbacks.tracers import LangChainTracer
 
 

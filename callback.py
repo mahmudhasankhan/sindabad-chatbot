@@ -1,7 +1,7 @@
 """Callback handlers used in the app."""
 from typing import Any, Dict, List
 
-from langchain.callbacks.manager import AsyncCallbackHandler
+from langchain.callbacks.base import AsyncCallbackHandler
 
 from schemas import ChatResponse
 
