@@ -20,22 +20,12 @@ _ = load_dotenv(find_dotenv())
 def callback_chain(
         vectorstore: Pinecone,
         question_handler,
-        stream_handler,
-        tracing: bool = False) -> ConversationalRetrievalChain:
-    manager = AsyncCallbackHandler([])
-    question_manager = AsyncCallbackHandler([question_handler])
-    stream_manager = AsyncCallbackHandler([stream_handler])
-
-    if tracing:
-        tracer = LangChainTracer()
-        tracer.load_default_session()
-        manager.add_handler(tracer)
-        question_manager.add_handler(tracer)
-        stream_manager.add_handler(tracer)
+        stream_handler
+) -> ConversationalRetrievalChain:
 
     model = ChatOpenAI(streaming=True,
                        temperature=0.0,
-                       callbacks=[question_manager, stream_manager])
+                       callbacks=[question_handler, stream_handler])
 
     template = """You are a helpful AI assistant that answers questions about
     an e-commerce company called "Sindabad.com" in a friendly and polite
@@ -88,7 +78,7 @@ def callback_chain(
         condense_question_prompt=condense_prompt,
         combine_docs_chain_kwargs={'prompt': prompt},
         verbose=False,
-        callbacks=[manager])
+        callbacks=[AsyncCallbackHandler()])
 
 
 def make_chain(pinecone_index: str) -> ConversationalRetrievalChain:

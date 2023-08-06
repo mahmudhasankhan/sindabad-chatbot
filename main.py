@@ -54,7 +54,7 @@ async def websocket_endpoint(websocket: WebSocket):
     while True:
         try:
             # Recieve and send back clent message
-            question = await websocket.recieve_text()
+            question = await websocket.receive_text()
             resp = ChatResponse(
                 sender="human",
                 message=question,
@@ -119,7 +119,7 @@ async def websocket_endpoint(websocket: WebSocket):
 
 def main():
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=9000, reload=False)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=False)
 
 
 if __name__ == "__main__":
