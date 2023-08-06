@@ -67,18 +67,19 @@ def callback_chain(
     )
     condense_prompt = PromptTemplate(
         input_variables=["question", "chat_history"],
-        template="""Combine the chat history and follow up question into /
-        a standalone question. /
+        template="""Combine the chat history and follow up question into
+        a standalone question.
         Chat History: {chat_history}
         Follow up question: {question}
         """
     )
 
-    memory = ConversationBufferWindowMemory(input_key="question",
-                                            memory_key="chat_history",
-                                            k=3,
-                                            return_messages=True,
-                                            output_key="answer")
+    # memory = ConversationBufferWindowMemory(
+    #     input_key="question",
+    #     memory_key="chat_history",
+    #     k=3,
+    #     return_messages=True,
+    #     output_key="answer")
 
     return ConversationalRetrievalChain.from_llm(
         model,
@@ -86,7 +87,6 @@ def callback_chain(
         return_source_documents=True,
         condense_question_prompt=condense_prompt,
         combine_docs_chain_kwargs={'prompt': prompt},
-        memory=memory,
         verbose=False,
         callbacks=[manager])
 
@@ -133,16 +133,16 @@ def make_chain(pinecone_index: str) -> ConversationalRetrievalChain:
         Follow up question: {question}
         """
     )
-    memory = ConversationBufferWindowMemory(input_key="question",
-                                            memory_key="chat_history",
-                                            k=3,
-                                            return_messages=True,
-                                            output_key="answer")
-    return ConversationalRetrievalChain.from_llm(model,
-                                                 retriever=vector_store.as_retriever(),
-                                                 return_source_documents=True,
-                                                 condense_question_prompt=condense_prompt,
-                                                 combine_docs_chain_kwargs={
-                                                     'prompt': prompt},
-                                                 memory=memory,
-                                                 verbose=False)
+    # memory = ConversationBufferWindowMemory(
+    #     input_key="question",
+    #     memory_key="chat_history",
+    #     k=3,
+    #     return_messages=True,
+    #     output_key="answer")
+    return ConversationalRetrievalChain.from_llm(
+        model,
+        retriever=vector_store.as_retriever(),
+        return_source_documents=True,
+        condense_question_prompt=condense_prompt,
+        combine_docs_chain_kwargs={'prompt': prompt},
+        verbose=False)

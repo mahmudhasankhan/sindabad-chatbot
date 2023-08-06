@@ -13,7 +13,7 @@ class ChatResponse(BaseModel):
 
     @validator("sender")
     def sender_must_be_bot_or_you(cls, v):
-        if v not in ["bot", "you"]:
+        if v not in ["bot", "human"]:
             raise ValueError("sender must be bot or you")
         return v
 
