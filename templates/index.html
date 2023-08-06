@@ -58,6 +58,9 @@
         ws.onmessage = function (event) {
             var messages = document.getElementById('messages');
             var data = JSON.parse(event.data);
+            console.log(data)
+            console.log(data.sender)
+            console.log(data.type)
             if (data.sender === "bot") {
                 if (data.type === "start") {
                     var header = document.getElementById('header');
@@ -114,7 +117,7 @@
             if (message === "") {
                 return;
             }
-            ws.send(message.value);
+            ws.send(message);
             document.getElementById('messageText').value = "";
 
             // Turn the button into a loading button

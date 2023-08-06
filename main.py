@@ -45,7 +45,7 @@ async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     question_handler = QuestionGenCallbackHandler(websocket)
     stream_handler = StreamingLLMCallbackHandler(websocket)
-    chat_history = []
+    # chat_history = []
     chain = callback_chain(
         vectorstore=vectorstore,
         question_handler=question_handler,
@@ -65,14 +65,14 @@ async def websocket_endpoint(websocket: WebSocket):
             start_resp = ChatResponse(
                 sender="bot",
                 message="",
-                type="stream"
+                type="start"
             )
             await websocket.send_json(start_resp.dict())
 
-            result = await chain.acall(
-                {"question": question, "chat_history": chat_history}
+            _ = await chain.acall(
+                {"question": question}
             )
-            chat_history.append((question, result["answer"]))
+            # chat_history.append((question, result["answer"]))
 
             end_resp = ChatResponse(
                 sender="bot",
@@ -119,7 +119,7 @@ async def websocket_endpoint(websocket: WebSocket):
 
 def main():
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=False)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
 
 
 if __name__ == "__main__":

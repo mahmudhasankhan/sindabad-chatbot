@@ -6,7 +6,7 @@ from langchain.vectorstores import Pinecone
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.prompts import PromptTemplate
-# from langchain.memory import ConversationBufferWindowMemory
+from langchain.memory import ConversationBufferWindowMemory
 
 from dotenv import load_dotenv, find_dotenv
 
@@ -64,12 +64,12 @@ def callback_chain(
         """
     )
 
-    # memory = ConversationBufferWindowMemory(
-    #     input_key="question",
-    #     memory_key="chat_history",
-    #     k=3,
-    #     return_messages=True,
-    #     output_key="answer")
+    memory = ConversationBufferWindowMemory(
+        input_key="question",
+        memory_key="chat_history",
+        k=3,
+        return_messages=True,
+        output_key="answer")
 
     return ConversationalRetrievalChain.from_llm(
         model,
@@ -78,6 +78,7 @@ def callback_chain(
         condense_question_prompt=condense_prompt,
         combine_docs_chain_kwargs={'prompt': prompt},
         verbose=False,
+        memory=memory,
         callbacks=[AsyncCallbackHandler()])
 
 
