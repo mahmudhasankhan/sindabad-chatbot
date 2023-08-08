@@ -6,7 +6,7 @@ from typing import Optional
 from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.templating import Jinja2Templates
 from callback import QuestionGenCallbackHandler, StreamingLLMCallbackHandler
-from chain import callback_chain
+from query_data import get_chain
 from schemas import ChatResponse
 from langchain.embeddings import HuggingFaceEmbeddings
 from dotenv import load_dotenv, find_dotenv
@@ -45,8 +45,8 @@ async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     question_handler = QuestionGenCallbackHandler(websocket)
     stream_handler = StreamingLLMCallbackHandler(websocket)
-    # chat_history = []
-    chain = callback_chain(
+    chat_history = []
+    chain = get_chain(
         vectorstore=vectorstore,
         question_handler=question_handler,
         stream_handler=stream_handler
@@ -56,7 +56,7 @@ async def websocket_endpoint(websocket: WebSocket):
             # Recieve and send back clent message
             question = await websocket.receive_text()
             resp = ChatResponse(
-                sender="human",
+                sender="you",
                 message=question,
                 type="stream")
             await websocket.send_json(resp.dict())
@@ -69,9 +69,11 @@ async def websocket_endpoint(websocket: WebSocket):
             )
             await websocket.send_json(start_resp.dict())
 
-            _ = await chain.acall(
-                {"question": question}
+            result = await chain.acall(
+                {"question": question, "chat_history": chat_history}
             )
+
+            chat_history.append((question, result["answer"]))
 
             end_resp = ChatResponse(
                 sender="bot",
