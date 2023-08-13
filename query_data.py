@@ -6,6 +6,7 @@ from langchain.chains.chat_vector_db.prompts import (CONDENSE_QUESTION_PROMPT,
                                                      QA_PROMPT)
 from langchain.chains.llm import LLMChain
 from langchain.chains.question_answering import load_qa_chain
+from langchain.chat_models import ChatOpenAI
 from langchain.llms import OpenAI
 from langchain.vectorstores import Pinecone
 from langchain.chains import ConversationalRetrievalChain
@@ -70,7 +71,7 @@ def get_chain(
         verbose=True,
         callback_manager=question_manager,
     )
-    streaming_llm = OpenAI(
+    streaming_llm = ChatOpenAI(
         streaming=True,
         callback_manager=stream_manager,
         verbose=True,
