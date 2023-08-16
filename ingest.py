@@ -12,6 +12,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import Pinecone
 
+
 def extract_matadata_from_pdf(pdf_file) -> dict:
 
     reader = PdfFileReader(pdf_file)
@@ -126,7 +127,7 @@ if __name__ == "__main__":
 
     if args.db is None:
         raise Exception("Pinecone index name must not be none!")
-    
+
     raw_pages, metadata = parse_pdf(os.path.join(os.getcwd(),
                                                  args.pdf))
     cleaned_text_pdf = clean_text(raw_pages, cleaning_functions)
