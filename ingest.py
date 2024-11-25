@@ -2,15 +2,19 @@ import argparse
 import os
 import pdfplumber
 import re
-import pinecone
+import logging
+import getpass
+import time
+import pandas as pd
 
 from typing import Callable, List, Tuple, Dict
 from dotenv import load_dotenv, find_dotenv
 from PyPDF4 import PdfFileReader
 from langchain.docstore.document import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import Pinecone
+from langchain_huggingface import HuggingFaceEmbeddings
+from pinecone import Pinecone, ServerlessSpec
+from langchain_pinecone import PineconeVectorStore
 
 
 def extract_matadata_from_pdf(pdf_file) -> dict:
@@ -108,50 +112,84 @@ def text_to_docs(text: List[str], metadata: Dict[str, str]) -> List[Document]:
     return doc_chunks
 
 
-if __name__ == "__main__":
+def load_csv(path):
+    dataframe = pd.read_csv(path)
+    dataframe['stuff'] = dataframe['product details'] + \
+        "Product link: " + dataframe['product link']
+    texts = dataframe['stuff'].tolist()
+
+    return texts
+
+
+def main():
+
     _ = load_dotenv(find_dotenv())
+
+    logging.basicConfig(filename='./logs/ingest.log',
+                        encoding='utf-8', level=logging.INFO)
 
     parser = argparse.ArgumentParser()
 
     # load file path
-    parser.add_argument("--pdf",
+    parser.add_argument("--file",
                         type=str,
                         default="",
-                        help="Enter the pdf file name")
-    parser.add_argument("--db",
-                        type=str,
-                        default=None,
-                        help="Enter pinecone index name")
+                        help="Enter the file path")
 
     args = parser.parse_args()
-
-    if args.db is None:
-        raise Exception("Pinecone index name must not be none!")
-
-    raw_pages, metadata = parse_pdf(os.path.join(os.getcwd(),
-                                                 args.pdf))
-    cleaned_text_pdf = clean_text(raw_pages, cleaning_functions)
-    document_chunks = text_to_docs(cleaned_text_pdf, metadata)
+    #
+    # logging.info("Extracting pages and metadata from the pdf")
+    # raw_pages, metadata = parse_pdf(os.path.join(os.getcwd(),
+    #                                              args.pdf))
+    # logging.info("Cleaning extracted pages")
+    # cleaned_text_pdf = clean_text(raw_pages, cleaning_functions)
+    # logging.info("Loading documents in chunks from the cleaned pages")
+    # document_chunks = text_to_docs(cleaned_text_pdf, metadata)
 
     # HuggingFaceEmbeddings
-
     model_name = "sentence-transformers/all-mpnet-base-v2"
     model_kwargs = {'device': 'cpu'}
     encode_kwargs = {'normalize_embeddings': True}
 
+    logging.info("Initializing hunggingface embedding model configuration")
     embeddings = HuggingFaceEmbeddings(model_name=model_name,
                                        model_kwargs=model_kwargs,
                                        encode_kwargs=encode_kwargs)
 
     # initialize pinecone
-    pinecone.init(api_key=os.environ['PINECONE_API_KEY'],
-                  environment=os.environ['PINECONE_ENV'])
+    logging.info("Initializing pinecone vectorstore")
+    if not os.getenv("PINECONE_API_KEY"):
+        os.environ["PINECONE_API_KEY"] = getpass.getpass(
+            "Enter your Pinecone API key: ")
 
-    print(f"Creating new index {args.db}")
-    pinecone.create_index(name=args.db,
-                          dimension=embeddings.client[1].word_embedding_dimension,
-                          metric='cosine',
-                          pods=1,
-                          replicas=1,
-                          pod_type="p1")
-    Pinecone.from_documents(document_chunks, embeddings, index_name=args.db)
+    pinecone_api_key = os.environ.get("PINECONE_API_KEY")
+
+    pc = Pinecone(api_key=pinecone_api_key)
+    index_name = os.environ.get("PINECONE_INDEX")  # change if desired
+
+    existing_indexes = [index_info["name"] for index_info in pc.list_indexes()]
+
+    if index_name not in existing_indexes:
+        pc.create_index(
+            name=index_name,
+            dimension=768,
+            metric="cosine",
+            spec=ServerlessSpec(cloud="aws", region="us-east-1"),
+        )
+        while not pc.describe_index(index_name).status["ready"]:
+            time.sleep(1)
+
+    if args.file is None:
+        raise Exception("file not found!")
+    else:
+        texts = load_csv(args.file)
+    if index_name not in existing_indexes:
+        PineconeVectorStore.from_texts(
+            texts, embeddings, index_name=os.environ.get("PINECONE_INDEX"))
+    else:
+        PineconeVectorStore.from_existing_index(
+            os.environ.get("PINECONE_INDEX"), embedding=embeddings)
+
+
+if __name__ == "__main__":
+    main()

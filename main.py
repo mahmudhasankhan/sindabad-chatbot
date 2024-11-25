@@ -1,6 +1,5 @@
 import logging
 import os
-import pinecone
 
 from typing import Optional
 from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
@@ -8,14 +7,16 @@ from fastapi.templating import Jinja2Templates
 from callback import QuestionGenCallbackHandler, StreamingLLMCallbackHandler
 from query_data import get_chain
 from schemas import ChatResponse
-from langchain.embeddings import HuggingFaceEmbeddings
+# from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from dotenv import load_dotenv, find_dotenv
-from langchain.vectorstores import Pinecone
+# from langchain.vectorstores import Pinecone
+from pinecone import Pinecone
+from langchain_pinecone import PineconeVectorStore
 
 app = FastAPI()
-templates = Jinja2Templates(directory="templates\\")
+templates = Jinja2Templates(directory="templates")
 vectorestore: Optional[Pinecone] = None
-pinecone_index = "sindabad"
 
 
 @app.on_event("startup")
@@ -29,10 +30,15 @@ async def startup_event():
         model_name="sentence-transformers/all-mpnet-base-v2",
         model_kwargs={'device': 'cpu'},
         encode_kwargs={'normalize_embeddings': True})
-    pinecone.init(api_key=os.environ['PINECONE_API_KEY'],
-                  environment=os.environ['PINECONE_ENV'])
+    # pinecone.init(api_key=os.environ['PINECONE_API_KEY'],
+    #               environment=os.environ['PINECONE_ENV'])
+    _ = Pinecone(api_key=os.environ.get("PINECONE_API_KEY"))
     global vectorstore
-    vectorstore = Pinecone.from_existing_index(pinecone_index, embeddings)
+    # vectorstore = Pinecone.from_existing_index(
+    #     os.environ['PINECONE_INDEX_NAME'], embeddings)
+
+    vectorstore = PineconeVectorStore.from_existing_index(
+        os.environ.get("PINECONE_INDEX"), embedding=embeddings)
 
 
 @app.get("/")
@@ -120,6 +126,8 @@ async def websocket_endpoint(websocket: WebSocket):
 
 def main():
     import uvicorn
+    logging.basicConfig(filename='./logs/main.log',
+                        encoding='utf-8', level=logging.INFO)
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
 
 
