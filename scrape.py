@@ -1,9 +1,9 @@
+# Importing necessary libraries for web scraping
 import time
 import argparse
 import pandas as pd
 import os
 import logging
-
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from tqdm import tqdm
@@ -18,7 +18,7 @@ PRODUCT_CLASS_ATTR = 'row product-row-scroll'
 PRODUCT_LINK_CLASS_ATTR = "details-link"
 PRODUCT_DIV_CLASS_ATTR = "osahan-main-body py-3 py-md-4"
 
-
+# Function to fetch webpage content
 def initialize_browser():
     driver = webdriver.Chrome()
     logging.info("Web driver initialized")
@@ -113,7 +113,7 @@ def product_scraper(driver, product_links):
     logging.info("Finished scraping products")
     return data
 
-
+# Function to parse data
 def main():
 
     logging.basicConfig(level=logging.INFO,
